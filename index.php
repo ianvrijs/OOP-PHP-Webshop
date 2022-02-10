@@ -5,10 +5,6 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR .
 
 database::init(DB_HOST, DB_NAME, DB_USER, DB_PASSWORD);
 
-$sHtmlNav = require_once(__DIR__ . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'nav.php');
-$sHtmlFooter = require_once(__DIR__ . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'footer.php');
-
-
 
 if (isset($_GET['module']) && !empty($_GET['module']))
 {
@@ -28,6 +24,8 @@ else
     header("Location: index.php?module=404");
 
 }
+$sHtmlNav = require_once(__DIR__ . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'nav.php');
+$sHtmlFooter = require_once(__DIR__ . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'footer.php');
 
 $oHtml = new html();
 $oHtml->addJs('formValidate.js');
@@ -38,6 +36,7 @@ $oHtml->setTitle('Eindopdracht php | Ian Vrijs');
 $oHtml->addHtml($sHtmlNav);
 $oHtml->addHtml($sHtmlBody);
 // $oHtml->addHtml($sHtmlFooter);
+
 
 
 //echo

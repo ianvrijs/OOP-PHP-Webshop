@@ -41,7 +41,7 @@ class product
 
 
                         <a href='index.php?module=shop&page=product&id" . '=' . $row["id"] . "'>
-                        <img class='productImgFull' alt='geen foto gevonden.  'src='" . $row['foto'] . "'>" . '
+                        <img class='productImgFull'  alt='". $row['naam']."' src='" . $row['foto'] . "'>" . '
                         <br>
                         <b class="bProduct"">' . $row["naam"] . '</b>
                         <br/>'. "
@@ -77,7 +77,7 @@ class product
                     <hr class='productFullHr'>
                     <div class='productFull'>
                         <a href='index.php?module=shop&page=product&id" . '=' . $row["id"] . "'>
-                        <img class='productImgFull' alt='geen foto gevonden.  'src='" . $row['foto'] . "'>" . '
+                        <img class='productImgFull' alt='". $row['naam']."'src='" . $row['foto'] . "'>" . '
                         <br>
                         <b class="bProduct"">' . $row["naam"] . '</b>
                         <br/>'. "
